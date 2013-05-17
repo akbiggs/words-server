@@ -27,9 +27,9 @@ var getWords = function(req, res, callback) {
 
 var makeStatement = function(rof, rwith, rwhere) {
     if (!rof && !rwith) {
-        return "cat /usr/share/dict/words";
+        return "cat words";
     } else {
-        return "grep " + selectOccurences(rof, rwhere) + " /usr/share/dict/words" +
+        return "grep " + selectOccurences(rof, rwhere) + " words" +
             "| sed s/" + rof + "/" + rwith + "/g";
     }
 };
