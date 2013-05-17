@@ -14,5 +14,5 @@ app.get("/words", function(req, res) {
     });
 });
 
-app.listen(PORT);
+app.listen(process.env.port || PORT);
 console.log("Listening on port " + PORT + "...");
